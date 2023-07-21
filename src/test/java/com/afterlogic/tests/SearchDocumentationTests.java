@@ -1,7 +1,7 @@
-package com.afterlogic;
+package com.afterlogic.tests;
 
-import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeAll;
+import com.afterlogic.pages.MainPage;
+import com.afterlogic.pages.SearchDocumentationPage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -12,15 +12,9 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class SearchDocumentationTests {
+public class SearchDocumentationTests extends TestBase {
 
-    @BeforeAll
-    static void beforeAll() {
-        baseUrl = "https://afterlogic.com";
-        Configuration.pageLoadStrategy = "eager";
-        Configuration.browserSize = "1920x1080";
-        Configuration.holdBrowserOpen = true;
-    }
+    SearchDocumentationPage searchDocumentationPage = new SearchDocumentationPage();
 
     @Test
     @Tag("smoke")
