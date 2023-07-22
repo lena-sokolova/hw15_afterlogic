@@ -18,6 +18,8 @@ public class SearchDocumentationTests extends TestBase {
                 .openDocumentationList()
                 .openAuroraDocumentation()
                 .searchDocumentation()
-                .checkSearchResult();
+                .checkSearchResult()
+                .openSearchResult()
+                .checkOpenedArticle();
     }
 }

@@ -2,6 +2,7 @@ package com.afterlogic.pages;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 
 import java.util.List;
 
@@ -43,78 +44,93 @@ public class MainPage {
     ElementsCollection tabsBar = $$("#main-menu a.l1");
     ElementsCollection productsList = $$(".products-list h3");
 
+    @Step("Открываем главную страницу")
     public MainPage openPage() {
         open(baseUrl);
         return this;
     }
 
+    @Step("Проверяем отображение информации о компании")
     public MainPage checkHomePageText() {
         homeText.shouldHave(text(successOpenPageText));
         return this;
     }
 
+    @Step("Проверяем наличие всех табов на странице")
     public MainPage checkTabsTitles() {
         tabsBar.shouldHave(texts(tabsTitles));
         return this;
     }
 
+    @Step("Переходим на страницу со списком продуктов")
     public MainPage openAllProductsList() {
         purchaseTab.hover().$(byText(productsListName)).hover();
         productsListLink.click();
         return this;
     }
 
+    @Step("Проверяем наличие всех продуктов в списке")
     public MainPage checkProductTitles() {
         productsList.shouldHave(texts(productNames));
         return this;
     }
 
+    @Step("Переходим к форме обратной связи")
     public MainPage openContactForm() {
         aboutTab.hover().$(byText(contactFormName)).hover();
         contactUsLink.click();
         return this;
     }
 
+    @Step("Заполняем поле Company/Organization name")
     public MainPage setCompanyName(String value) {
         companyName.setValue(value);
         return this;
     }
 
+    @Step("Заполняем поле Your name")
     public MainPage setYourName(String value) {
         yourName.setValue(value);
         return this;
     }
 
+    @Step("Заполняем поле Phone number")
     public MainPage setPhoneNumber(String value) {
         phoneNumber.setValue(value);
         return this;
     }
 
+    @Step("Заполняем поле Email")
     public MainPage setEmail(String value) {
         email.setValue(value);
         return this;
     }
 
+    @Step("Заполняем поле Message")
     public MainPage setMessage(String value) {
         message.setValue(value);
         return this;
     }
 
+    @Step("Отправляем сообщение")
     public MainPage clickSendBtn() {
         sendBtn.click();
         return this;
     }
 
+    @Step("Проверяем, что сообщение успешно отправлено")
     public MainPage checkSuccessSendMessageText() {
         sendMessageText.shouldHave(text(successSendMessageText));
         return this;
     }
 
+    @Step("Открываем раздел политики конфиденциальности")
     public MainPage openPrivacyPolicyTerms() {
         privacyPolicyLink.click();
         return this;
     }
 
+    @Step("Проверяем успешный переход на страницу политики конфиденциальности")
     public MainPage checkOpenPrivacyPolicyTerms() {
         privacyPolicyTitle.shouldHave(text(privacyPolicyTitleName));
         return this;
