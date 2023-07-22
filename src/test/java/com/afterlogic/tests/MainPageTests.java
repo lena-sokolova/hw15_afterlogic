@@ -44,11 +44,11 @@ public class MainPageTests extends TestBase {
         mainPage
                 .openPage()
                 .openContactForm()
-                .setCompanyName()
-                .setYourName()
-                .setPhoneNumber()
-                .setEmail()
-                .setMessage()
+                .setCompanyName(TestData.companyName)
+                .setYourName(TestData.userName)
+                .setPhoneNumber(TestData.userNumber)
+                .setEmail(TestData.userEmail)
+                .setMessage(TestData.message)
                 .clickSendBtn()
                 .checkSuccessSendMessageText();
     }

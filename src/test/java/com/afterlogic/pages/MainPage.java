@@ -75,33 +75,28 @@ public class MainPage {
         return this;
     }
 
-//    public MainPage setCompanyName(String value) {
-//        companyName.setValue(value);
-//        return this;
-//    }
-
-    public MainPage setCompanyName() {
-        companyName.setValue("Test company");
+    public MainPage setCompanyName(String value) {
+        companyName.setValue(value);
         return this;
     }
 
-    public MainPage setYourName() {
-        yourName.setValue("Test name");
+    public MainPage setYourName(String value) {
+        yourName.setValue(value);
         return this;
     }
 
-    public MainPage setPhoneNumber() {
-        phoneNumber.setValue("+19001001001");
+    public MainPage setPhoneNumber(String value) {
+        phoneNumber.setValue(value);
         return this;
     }
 
-    public MainPage setEmail() {
-        email.setValue("test@email.com");
+    public MainPage setEmail(String value) {
+        email.setValue(value);
         return this;
     }
 
-    public MainPage setMessage() {
-        message.setValue("Hello!");
+    public MainPage setMessage(String value) {
+        message.setValue(value);
         return this;
     }
 
