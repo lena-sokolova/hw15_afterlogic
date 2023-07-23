@@ -17,7 +17,7 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         Configuration.pageLoadStrategy = "eager";
-        Configuration.baseUrl = System.getProperty("baseUrl","https://afterlogic.com" );
+        Configuration.baseUrl = System.getProperty("baseUrl", "https://afterlogic.com");
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
         Configuration.browserSize = System.getProperty("screenResolution", "1920x1080");
@@ -25,9 +25,9 @@ public class TestBase {
 //        Configuration.holdBrowserOpen = true;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("selenoid:options", Map .<String, Object>of(
-                    "enableVNC", true,
-                    "enableVideo", true
+        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+                "enableVNC", true,
+                "enableVideo", true
         ));
 
         Configuration.browserCapabilities = capabilities;
