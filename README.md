@@ -111,8 +111,8 @@ ${TASK}
 <img width="70%" title="Telegram Notifications" src="media/screenshots/telegram.png">
 </p>
 
-## <img width="4%" style="vertical-align:middle"  title="Selenoid" src="media/icons/Selenoid.svg"> Пример видео запуска тестов в Selenoid
 
+##  :film_strip: Пример видео запуска тестов в Selenoid
 В отчетах Allure для каждого теста прикреплен скриншот последнего шага и видео прохождения теста.
 
 <p align="center">
