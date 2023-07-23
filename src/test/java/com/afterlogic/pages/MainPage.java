@@ -47,6 +47,7 @@ public class MainPage {
     @Step("Открываем главную страницу")
     public MainPage openPage() {
         open(baseUrl);
+        sleep(2000);
         return this;
     }
 
