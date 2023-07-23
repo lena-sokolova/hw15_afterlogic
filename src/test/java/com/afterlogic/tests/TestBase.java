@@ -45,7 +45,7 @@ public class TestBase {
         Attach.browserConsoleLogs();
         Attach.addVideo();
 
-        closeWebDriver();
+//        closeWebDriver();
     }
 }
 
