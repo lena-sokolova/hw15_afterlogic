@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 public class MainPageTests extends TestBase {
 
     MainPage mainPage = new MainPage();
+    TestData testData = new TestData();
 
     @Test
     @Tag("smoke")
@@ -44,11 +45,11 @@ public class MainPageTests extends TestBase {
         mainPage
                 .openPage()
                 .openContactForm()
-                .setCompanyName(TestData.companyName)
-                .setYourName(TestData.userName)
-                .setPhoneNumber(TestData.userNumber)
-                .setEmail(TestData.userEmail)
-                .setMessage(TestData.message)
+                .setCompanyName(testData.companyName)
+                .setYourName(testData.userName)
+                .setPhoneNumber(testData.userNumber)
+                .setEmail(testData.userEmail)
+                .setMessage(testData.message)
                 .clickSendBtn()
                 .checkSuccessSendMessageText();
     }
