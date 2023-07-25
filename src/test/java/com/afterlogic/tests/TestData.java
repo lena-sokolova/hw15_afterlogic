@@ -8,9 +8,9 @@ public class TestData {
 
     Faker faker = new Faker();
 
-    String companyName = faker.company().name();
-    String userName = faker.name().firstName();
-    String userEmail = faker.internet().emailAddress();
-    String userNumber = faker.phoneNumber().subscriberNumber(10);
-    String message = getRandomMessage();
+    String companyName = faker.company().name(),
+            userName = faker.name().firstName(),
+            userEmail = faker.internet().emailAddress(),
+            userNumber = faker.phoneNumber().subscriberNumber(10),
+            message = getRandomMessage();
 }
